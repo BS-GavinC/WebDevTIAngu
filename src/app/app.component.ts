@@ -1,12 +1,21 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { MyComponentComponent } from "./component/my-component/my-component.component";
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [MyComponentComponent, RouterOutlet, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'AnguWebDev';
+export class AppComponent implements OnInit {
+
+  constructor() {
+    console.log('CTOR');
+  }
+
+  ngOnInit(): void {
+    console.log('INIT');
+  }
+
 }
