@@ -1,0 +1,29 @@
+<p>One-Way Binding :</p>
+{{maVariable}}
+<br>
+<p>-----------------------------------------</p>
+<br>
+<p>Two-Way Binding</p>
+<input [(ngModel)]="userValue" type="text">
+
+{{userValue}}
+<br>
+<p>-----------------------------------------</p>
+<br>
+<p>Event Binding</p>
+<button (click)="resetValues()">RESETER</button>
+<button (click)="setValue('Bonjooooooour')">SET VALUE</button>
+<br>
+<p>-----------------------------------------</p>
+<br>
+<p>Attribute Binding</p>
+
+<button [disabled]="!isEnabled">With</button>
+<button disabled="false">Without</button>
+
+<br>
+<p>-----------------------------------------</p>
+<br>
+
+<p>{{maDate | date:'longDate'}}</p>
+<p>{{alphaNumeric | numberGetter}}</p>
