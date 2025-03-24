@@ -1,17 +1,30 @@
 import { Routes } from '@angular/router';
-import { MyComponentComponent } from './component/my-component/my-component.component';
-import { MySecondComponentComponent } from './component/my-second-component/my-second-component.component';
-import { MySubComponentComponent } from './component/my-sub-component/my-sub-component.component';
-
+import { MainDemoComponent } from './demo/main-demo/main-demo.component';
+import { MainExoComponent } from './exo/main-exo/main-exo.component';
+import { Demo1Component } from './demo/demo1/demo1.component';
+import { Exo1Component } from './exo/exo1/exo1.component';
 export const routes: Routes = [
   {
-    path : 'my-component', component : MyComponentComponent, children : [
+    path : 'demo', component : MainDemoComponent, children : [
       {
-        path : 'my-sub-component', component : MySubComponentComponent
+        path : 'demo1', component : Demo1Component
+      },
+      {
+        path : '**', redirectTo : 'demo1'
       }
     ]
   },
   {
-    path : 'my-second-component', component : MySecondComponentComponent
+    path : 'exo', component : MainExoComponent, children : [
+      {
+        path : 'exo1', component : Exo1Component
+      },
+      {
+        path : '**', redirectTo : 'exo1'
+      }
+    ]
+  },
+  {
+    path : '**', redirectTo : 'demo'
   }
 ];
