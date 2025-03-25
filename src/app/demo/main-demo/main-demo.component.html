@@ -1,9 +1,12 @@
 <ul>
-  <li>
-    <a [routerLink]="['/demo', 'binding']">Binding</a>
-  </li>
-  <li>
-    <a [routerLink]="['/demo', 'directive']">Directive</a>
-  </li>
+  @for (item of navItems; track $index)
+  {
+    @if (item.isVisible)
+    {
+      <li>
+        <a [routerLink]="item.url">{{item.title}}</a>
+      </li>
+    }
+  }
 </ul>
 <router-outlet></router-outlet>

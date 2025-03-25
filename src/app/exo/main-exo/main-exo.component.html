@@ -1,6 +1,12 @@
 <ul>
-  <li>
-    <a [routerLink]="['/exo', 'chrono']">Chrono</a>
-  </li>
+  @for (item of navItems; track $index)
+  {
+    @if (item.isVisible)
+    {
+      <li>
+        <a [routerLink]="item.url">{{item.title}}</a>
+      </li>
+    }
+  }
 </ul>
 <router-outlet></router-outlet>
