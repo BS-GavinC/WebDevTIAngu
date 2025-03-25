@@ -1,0 +1,5 @@
+<p>Valeur de l'enfant : {{valeurEnfant}}</p>
+
+<app-enfant [valeurDuParent]="valeurParent" (eventParent)="recevoirValeurEnfant($event)">
+  <p>Contenu intérieur de la balise parent</p>
+</app-enfant>

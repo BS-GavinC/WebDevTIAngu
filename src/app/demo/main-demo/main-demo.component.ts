@@ -21,5 +21,10 @@ export class MainDemoComponent {
       url : ['/demo', 'directive'],
       isVisible : true
     },
+    {
+      title : 'InpOut',
+      url : ['/demo', 'inpout'],
+      isVisible : true
+    },
   ]
 }
