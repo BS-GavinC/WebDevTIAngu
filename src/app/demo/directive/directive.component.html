@@ -1,0 +1,38 @@
+<p>directive !</p>
+
+<h4>If Directive</h4>
+
+<p>Age {{age}}</p>
+
+@if (age >= 18)
+{
+  <p>Est Majeur</p>
+}
+@else{
+  <p>Est Mineur</p>
+}
+
+<h4>For Directive</h4>
+
+@for (elem of maList; track $index)
+{
+  <p>Index {{$index}} : Valeur {{elem}}</p>
+}
+
+<h4>Switch Directive</h4>
+
+@switch (countrySelected)
+{
+  @case (countryEnum.be)
+  {
+    <p>LESGO</p>
+  }
+  @case (countryEnum.fr)
+  {
+    <p>Berk</p>
+  }
+  @case (countryEnum.nl)
+  {
+    <p>Neeeee</p>
+  }
+}

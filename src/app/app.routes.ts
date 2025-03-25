@@ -1,13 +1,17 @@
 import { Routes } from '@angular/router';
 import { MainDemoComponent } from './demo/main-demo/main-demo.component';
 import { MainExoComponent } from './exo/main-exo/main-exo.component';
-import { Exo1Component } from './exo/exo1/exo1.component';
 import { BindingComponent } from './demo/binding/binding.component';
+import { ChronoComponent } from './exo/chrono/chrono.component';
+import { DirectiveComponent } from './demo/directive/directive.component';
 export const routes: Routes = [
   {
     path : 'demo', component : MainDemoComponent, children : [
       {
         path : 'binding', component : BindingComponent
+      },
+      {
+        path : 'directive', component : DirectiveComponent
       },
       {
         path : '**', redirectTo : 'demo1'
@@ -17,7 +21,7 @@ export const routes: Routes = [
   {
     path : 'exo', component : MainExoComponent, children : [
       {
-        path : 'exo1', component : Exo1Component
+        path : 'chrono', component : ChronoComponent
       },
       {
         path : '**', redirectTo : 'exo1'
