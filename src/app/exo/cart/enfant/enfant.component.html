@@ -1,0 +1,13 @@
+<p>---------------</p>
+<p>--ARTICLES--</p>
+<p>---------------</p>
+
+<ul>
+  @for (item of articles(); track $index)
+  {
+    <li>
+      <p>{{item.name}}</p>
+      <button (click)="deleteById(item.id)" >Delete</button>
+    </li>
+  }
+</ul>

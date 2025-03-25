@@ -15,7 +15,12 @@ export class MainExoComponent {
       title : 'chrono',
       url : ['/exo', 'chrono'],
       isVisible : true
-    }
+    },
+    {
+      title : 'cart',
+      url : ['/exo', 'cart'],
+      isVisible : true
+    },
   ]
 
 }

@@ -4,7 +4,9 @@ import { MainExoComponent } from './exo/main-exo/main-exo.component';
 import { BindingComponent } from './demo/binding/binding.component';
 import { ChronoComponent } from './exo/chrono/chrono.component';
 import { DirectiveComponent } from './demo/directive/directive.component';
-import { ParentComponent } from './demo/inpout/parent/parent.component';
+import { ParentComponent as inpoutParent } from './demo/inpout/parent/parent.component';
+import { ParentComponent as cartParent } from './exo/cart/parent/parent.component';
+
 export const routes: Routes = [
   {
     path : 'demo', component : MainDemoComponent, children : [
@@ -15,7 +17,7 @@ export const routes: Routes = [
         path : 'directive', component : DirectiveComponent
       },
       {
-        path : 'inpout', component : ParentComponent
+        path : 'inpout', component : inpoutParent
       },
       {
         path : '**', redirectTo : 'demo1'
@@ -26,6 +28,9 @@ export const routes: Routes = [
     path : 'exo', component : MainExoComponent, children : [
       {
         path : 'chrono', component : ChronoComponent
+      },
+      {
+        path : 'cart', component : cartParent
       },
       {
         path : '**', redirectTo : 'exo1'
