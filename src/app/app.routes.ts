@@ -6,6 +6,7 @@ import { ChronoComponent } from './exo/chrono/chrono.component';
 import { DirectiveComponent } from './demo/directive/directive.component';
 import { ParentComponent as inpoutParent } from './demo/inpout/parent/parent.component';
 import { ParentComponent as cartParent } from './exo/cart/parent/parent.component';
+import { ServiceComponent } from './demo/service/service.component';
 
 export const routes: Routes = [
   {
@@ -18,6 +19,9 @@ export const routes: Routes = [
       },
       {
         path : 'inpout', component : inpoutParent
+      },
+      {
+        path : 'service', component : ServiceComponent
       },
       {
         path : '**', redirectTo : 'demo1'

@@ -26,5 +26,10 @@ export class MainDemoComponent {
       url : ['/demo', 'inpout'],
       isVisible : true
     },
+    {
+      title : 'Service',
+      url : ['/demo', 'service'],
+      isVisible : true
+    },
   ]
 }
