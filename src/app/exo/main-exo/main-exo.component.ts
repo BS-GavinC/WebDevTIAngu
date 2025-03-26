@@ -21,6 +21,11 @@ export class MainExoComponent {
       url : ['/exo', 'cart'],
       isVisible : true
     },
+    {
+      title : 'inout',
+      url : ['/exo', 'inout'],
+      isVisible : true
+    },
   ]
 
 }

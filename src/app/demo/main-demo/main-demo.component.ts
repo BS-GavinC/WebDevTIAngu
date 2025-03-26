@@ -31,5 +31,15 @@ export class MainDemoComponent {
       url : ['/demo', 'service'],
       isVisible : true
     },
+    {
+      title : 'Routing',
+      url : ['/demo', 'routing'],
+      isVisible : true
+    },
+    {
+      title : 'Forms',
+      url : ['/demo', 'forms'],
+      isVisible : true
+    },
   ]
 }

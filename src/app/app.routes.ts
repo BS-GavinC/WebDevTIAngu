@@ -7,6 +7,9 @@ import { DirectiveComponent } from './demo/directive/directive.component';
 import { ParentComponent as inpoutParent } from './demo/inpout/parent/parent.component';
 import { ParentComponent as cartParent } from './exo/cart/parent/parent.component';
 import { ServiceComponent } from './demo/service/service.component';
+import { InoutComponent } from './exo/inout/inout.component';
+import { RoutingComponent } from './demo/routing/routing.component';
+import { FormsComponent } from './demo/forms/forms.component';
 
 export const routes: Routes = [
   {
@@ -24,12 +27,21 @@ export const routes: Routes = [
         path : 'service', component : ServiceComponent
       },
       {
+        path : 'routing', component : RoutingComponent
+      },
+      {
+        path : 'routing/:id', component : RoutingComponent
+      },
+      {
+        path : 'forms', component : FormsComponent
+      },
+      {
         path : '**', redirectTo : 'demo1'
       }
     ]
   },
   {
-    path : 'exo', component : MainExoComponent, children : [
+    path : 'exo', loadComponent : () => import('./exo/main-exo/main-exo.component').then(x => x.MainExoComponent), children : [
       {
         path : 'chrono', component : ChronoComponent
       },
@@ -37,7 +49,10 @@ export const routes: Routes = [
         path : 'cart', component : cartParent
       },
       {
-        path : '**', redirectTo : 'exo1'
+        path : 'inout', component : InoutComponent
+      },
+      {
+        path : '**', redirectTo : 'chrono'
       }
     ]
   },

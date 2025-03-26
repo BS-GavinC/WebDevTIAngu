@@ -1,0 +1,22 @@
+<p>forms works!</p>
+
+<form [formGroup]="form">
+  <label for="email">Email</label> &nbsp;
+  <input id="email" type="email" formControlName="email">
+  <br>
+  <label for="password">Password</label> &nbsp;
+  <input id="password" type="password" formControlName="password">
+  <br>
+
+
+  <button (click)="addBeg()">Add</button>
+  <div formArrayName="beg">
+    <div *ngFor="let control of getBegArray().controls; let i = index">
+      <br>
+      {{ i + 1 }} <input type="text" [formControlName]="i">
+      <button (click)="removeBeg(i)">Remove</button>
+    </div>
+  </div>
+  <br>
+  <input [disabled]="!form.valid" (click)="submit()" type="button" value="Valider">
+</form>

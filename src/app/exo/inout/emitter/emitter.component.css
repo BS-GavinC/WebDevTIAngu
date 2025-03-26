@@ -1,0 +1,14 @@
+#main{
+  background-color: chartreuse;
+  height: 10em;
+  width: 10em;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+input{
+  width: 8em;
+}
