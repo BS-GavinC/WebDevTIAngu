@@ -26,6 +26,11 @@ export class MainExoComponent {
       url : ['/exo', 'inout'],
       isVisible : true
     },
+    {
+      title : 'list',
+      url : ['/exo', 'list'],
+      isVisible : true
+    },
   ]
 
 }

@@ -10,6 +10,10 @@ import { ServiceComponent } from './demo/service/service.component';
 import { InoutComponent } from './exo/inout/inout.component';
 import { RoutingComponent } from './demo/routing/routing.component';
 import { FormsComponent } from './demo/forms/forms.component';
+import { ListComponent } from './exo/fan/list/list.component';
+import { AddComponent } from './exo/fan/add/add.component';
+import { DetailComponent } from './exo/fan/detail/detail.component';
+import { UpdateComponent } from './exo/fan/update/update.component';
 
 export const routes: Routes = [
   {
@@ -50,6 +54,18 @@ export const routes: Routes = [
       },
       {
         path : 'inout', component : InoutComponent
+      },
+      {
+        path : 'list', component : ListComponent
+      },
+      {
+        path : 'add', component : AddComponent
+      },
+      {
+        path : 'detail/:id', component : DetailComponent
+      },
+      {
+        path : 'update/:id', component : UpdateComponent
       },
       {
         path : '**', redirectTo : 'chrono'

@@ -1,0 +1,14 @@
+<p>mes fans!</p>
+<a [routerLink]="['/exo', 'add']">Ajouter</a>
+<ul>
+  @for (fan of _fanService.getFans; track $index)
+  {
+    <li>
+      <p>{{fan.name}} - {{fan.birthdate | date :'short'}} - {{fan.movies.join(', ')}}</p>
+      <button (click)="_fanService.deleteFan(fan.id)">Delete</button>
+      <button (click)="routeToUpdate(fan.id)">Update</button>
+      <button (click)="routeToDateil(fan.id)">Detail</button>
+    </li>
+  }
+</ul>
+

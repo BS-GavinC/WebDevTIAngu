@@ -1,0 +1,17 @@
+<p>add fan!</p>
+
+<form [formGroup]="form">
+  <label for="name">Nom</label>
+  <input id="name" type="text" formControlName="name">
+  <label for="birthdate">Birthdate</label>
+  <input id="birthdate" type="date" formControlName="birthdate">
+  <button (click)="addMovie()">Add Movie</button>
+  <div  formArrayName="movies">
+    <div *ngFor="let item of getArray().controls; let i = index">
+      {{i + 1}} <input [formControlName]="i" type="text">
+      <button (click)="deleteArrayItem(i)">Supprimer</button>
+    </div>
+  </div>
+
+  <button [disabled]="!form.valid" (click)="submit()">Valider</button>
+</form>
