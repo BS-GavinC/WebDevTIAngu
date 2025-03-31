@@ -15,6 +15,7 @@ import { AddComponent } from './exo/fan/add/add.component';
 import { DetailComponent } from './exo/fan/detail/detail.component';
 import { UpdateComponent } from './exo/fan/update/update.component';
 import { MainComponent } from './demo/observable/main/main.component';
+import { MainInterComponent } from './exo/observable/main-inter/main-inter.component';
 
 export const routes: Routes = [
   {
@@ -70,6 +71,9 @@ export const routes: Routes = [
       },
       {
         path : 'update/:id', component : UpdateComponent
+      },
+      {
+        path : 'interrupteur', component : MainInterComponent
       },
       {
         path : '**', redirectTo : 'chrono'

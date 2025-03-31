@@ -27,8 +27,13 @@ export class MainExoComponent {
       isVisible : true
     },
     {
-      title : 'list',
+      title : 'List',
       url : ['/exo', 'list'],
+      isVisible : true
+    },
+    {
+      title : 'Interrupteur',
+      url : ['/exo', 'interrupteur'],
       isVisible : true
     },
   ]
