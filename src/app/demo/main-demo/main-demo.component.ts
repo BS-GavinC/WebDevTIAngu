@@ -46,5 +46,10 @@ export class MainDemoComponent {
       url : ['/demo', 'observable'],
       isVisible : true
     },
+    {
+      title : 'Pokemon',
+      url : ['/demo', 'pokemon'],
+      isVisible : true
+    },
   ]
 }

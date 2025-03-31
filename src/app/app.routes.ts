@@ -16,6 +16,7 @@ import { DetailComponent } from './exo/fan/detail/detail.component';
 import { UpdateComponent } from './exo/fan/update/update.component';
 import { MainComponent } from './demo/observable/main/main.component';
 import { MainInterComponent } from './exo/observable/main-inter/main-inter.component';
+import { PokemonComponent } from './demo/http/pokemon/pokemon.component';
 
 export const routes: Routes = [
   {
@@ -43,6 +44,9 @@ export const routes: Routes = [
       },
       {
         path : 'observable', component : MainComponent
+      },
+      {
+        path : 'pokemon', component : PokemonComponent
       },
       {
         path : '**', redirectTo : 'demo1'
