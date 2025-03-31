@@ -14,6 +14,7 @@ import { ListComponent } from './exo/fan/list/list.component';
 import { AddComponent } from './exo/fan/add/add.component';
 import { DetailComponent } from './exo/fan/detail/detail.component';
 import { UpdateComponent } from './exo/fan/update/update.component';
+import { MainComponent } from './demo/observable/main/main.component';
 
 export const routes: Routes = [
   {
@@ -38,6 +39,9 @@ export const routes: Routes = [
       },
       {
         path : 'forms', component : FormsComponent
+      },
+      {
+        path : 'observable', component : MainComponent
       },
       {
         path : '**', redirectTo : 'demo1'

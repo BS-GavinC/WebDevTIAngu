@@ -41,5 +41,10 @@ export class MainDemoComponent {
       url : ['/demo', 'forms'],
       isVisible : true
     },
+    {
+      title : 'Observable',
+      url : ['/demo', 'observable'],
+      isVisible : true
+    },
   ]
 }
