@@ -17,6 +17,7 @@ import { UpdateComponent } from './exo/fan/update/update.component';
 import { MainComponent } from './demo/observable/main/main.component';
 import { MainInterComponent } from './exo/observable/main-inter/main-inter.component';
 import { PokemonComponent } from './demo/http/pokemon/pokemon.component';
+import { MainHttpComponent } from './exo/http/main-http/main-http.component';
 
 export const routes: Routes = [
   {
@@ -78,6 +79,9 @@ export const routes: Routes = [
       },
       {
         path : 'interrupteur', component : MainInterComponent
+      },
+      {
+        path : 'http', component : MainHttpComponent
       },
       {
         path : '**', redirectTo : 'chrono'

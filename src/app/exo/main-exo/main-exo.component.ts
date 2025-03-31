@@ -36,6 +36,11 @@ export class MainExoComponent {
       url : ['/exo', 'interrupteur'],
       isVisible : true
     },
+    {
+      title : 'Http',
+      url : ['/exo', 'http'],
+      isVisible : true
+    },
   ]
 
 }

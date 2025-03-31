@@ -1,0 +1,20 @@
+<input [(ngModel)]="selectedNumber" type="number">
+
+<button (click)="search()">Search</button>
+
+<br>
+
+@if (!errorMessage)
+{
+  @if (pokemon)
+  {
+    <p>Name : {{pokemon.name}}</p>
+    <p>Height : {{pokemon.height * 10}} Cm</p>
+    <p>Weight : {{pokemon.weight / 10}} Kg</p>
+    <img [src]="pokemon.sprites.front_default" alt="">
+  }
+
+}
+@else {
+  <p style="color: red;">{{errorMessage}}</p>
+}

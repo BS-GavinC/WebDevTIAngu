@@ -1,3 +1,5 @@
+import { Sprites } from "./sprites.interface"
+
 export interface Pokemon {
   abilities: any[]
   base_experience: number
@@ -15,7 +17,7 @@ export interface Pokemon {
   past_abilities: any[]
   past_types: any[]
   species: any
-  sprites: any
+  sprites: Sprites
   stats: any[]
   types: any[]
   weight: number
